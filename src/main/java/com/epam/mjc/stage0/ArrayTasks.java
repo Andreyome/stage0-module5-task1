@@ -67,6 +67,10 @@ public class ArrayTasks {
         for (int i=1;i<arr.length;i++){
             if (arr[i-1]!=number){
                 result+=1;
+                if(result+1>=arr.length){
+                    result=-1;
+                    break;
+                }
             }
             else{
                 break;
