@@ -136,26 +136,26 @@ result [i]=arr[arr.length-i-1];
      * arr = [[5, 4], [7]]       -> [[7], [4, 5]]
      */
     public int[][] sortRaggedArray(int[][] arr) {
+        int [][] result= arr;
         if (arr[0].length>arr[1].length) {
-            int[] temp = arr[0];
-            arr[0] = arr[1];
-            arr[1] = temp;
+            int[] temp = result[0];
+            result[0] = result[1];
+            result[1] = temp;
         }
 for (int i=0;i<2;i++){
 boolean isSorted = false;
 while(!isSorted) {
     isSorted=true;
-    for (int j = 1; j < arr[i].length; j++) {
-        if (arr[i][j] < arr[i][j - 1]) {
-            int temporary = arr[i][j];
-            arr[i][j] = arr[i][j - 1];
-            arr[i][j - 1] = temporary;
+    for (int j = 1; j < result[i].length; j++) {
+        if (result[i][j] < result[i][j - 1]) {
+            int temporary = result[i][j];
+            result[i][j] = result[i][j - 1];
+            result[i][j - 1] = temporary;
             isSorted = false;
         }
     }
 }
 }
-        return arr;
-
+        return result;
     }
 }
