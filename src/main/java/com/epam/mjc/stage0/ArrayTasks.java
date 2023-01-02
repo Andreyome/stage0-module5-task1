@@ -63,7 +63,7 @@ public class ArrayTasks {
      * arr = [5, -3, -4],   number = 10    ->  -1
      */
     public int findIndexOfNumber(int[] arr, int number) {
-        int result = 1;
+        int result = 0;
         for (int i=1;i<arr.length;i++){
             if (arr[i-1]!=number){
                 result+=1;
